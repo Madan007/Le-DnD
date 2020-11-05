@@ -18,36 +18,48 @@ export default class DragThingsToBoxesDemo extends React.Component {
           <Boxable
             targetKey="box"
             label="bananas"
+            id="1"
+            isDragable="false"
             image="img/banana.png"
             customDragElement={cutomDragElem}
           />
           <Boxable
             targetKey="box"
             label="cheeseburger"
+            id="2"
+            isDragable="true"
             image="img/surprise.png"
             customDragElement={cutomDragElem}
           />
           <Boxable
             targetKey="box"
             label="orange"
+            id="3"
+            isDragable="true"
             image="img/orange.png"
             customDragElement={cutomDragElem}
           />
           <Boxable
             targetKey="box"
             label="pickle"
+            id="4"
+            isDragable="true"
             image="img/pickle.png"
             customDragElement={cutomDragElem}
           />
           <Boxable
             targetKey="box"
             label="gorilla"
+            id="5"
+            isDragable="true"
             image="img/gorilla.png"
             customDragElement={cutomDragElem}
           />
           <Boxable
             targetKey="box"
             label="puppy"
+            id="6"
+            isDragable="true"
             image="img/puppy.png"
             customDragElement={cutomDragElem}
           />

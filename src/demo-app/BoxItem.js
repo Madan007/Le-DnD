@@ -1,5 +1,5 @@
 import React from 'react';
-import { DragDropContainer, DropTarget } from '../le-dnd';
+import { DragContainer, DropContainer } from '../le-dnd';
 import './BoxItem.css';
 
 /*
@@ -32,22 +32,22 @@ export default class BoxItem extends React.Component {
 
     return (
       <div className="box_item_component">
-        <DragDropContainer
+        <DragContainer
           targetKey="boxItem"
           dragData={{ label: this.props.children, index: this.props.index }}
           onDrop={this.deleteMe}
           disappearDraggedElement={true}
           dragHandleClassName="grabber"
         >
-          <DropTarget onHit={this.handleDrop} targetKey="boxItem">
+          <DropContainer onHit={this.handleDrop} targetKey="boxItem">
             <div className="outer">
               <div className="item">
                 <span className="grabber">&#8759;</span>
                 {this.props.children}
               </div>
             </div>
-          </DropTarget>
-        </DragDropContainer>
+          </DropContainer>
+        </DragContainer>
       </div>
     );
   }

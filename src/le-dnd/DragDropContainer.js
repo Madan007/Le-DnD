@@ -22,7 +22,7 @@ function isZoomed() {
   return Math.abs(1 - document.body.clientWidth / window.innerWidth) > 0.02;
 }
 
-class DragDropContainer extends React.Component {
+class DragContainer extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -55,15 +55,13 @@ class DragDropContainer extends React.Component {
 
   componentDidMount() {
     // set draggable attribute 'false' on any images, to prevent conflicts w browser native dragging
-
-    // console.log('this.containerElem...', this.containerElem);
     const imgs = this.containerElem.getElementsByTagName('IMG');
     for (let i = 0; i < imgs.length; i += 1) {
       imgs[i].setAttribute('draggable', 'false');
     }
 
     // capture events
-    if (this.props.dragHandleClassName) {
+    if (this.props.dragHandleClassName && this.props.isDragable === 'true') {
       // if drag handles
       const elems = this.containerElem.getElementsByClassName(
         this.props.dragHandleClassName
@@ -74,8 +72,10 @@ class DragDropContainer extends React.Component {
       }
     } else {
       // ... or not
-      this.addListeners(this.containerElem);
-      this.containerElem.style.cursor = 'move';
+      if (this.props.isDragable === 'true') {
+        this.addListeners(this.containerElem);
+        this.containerElem.style.cursor = 'move';
+      }
     }
   }
 
@@ -394,7 +394,7 @@ class DragDropContainer extends React.Component {
   }
 }
 
-DragDropContainer.propTypes = {
+DragContainer.propTypes = {
   children: PropTypes.node,
 
   // Determines what you can drop on
@@ -438,7 +438,7 @@ DragDropContainer.propTypes = {
   zIndex: PropTypes.number,
 };
 
-DragDropContainer.defaultProps = {
+DragContainer.defaultProps = {
   targetKey: 'ddc',
   children: null,
   customDragElement: null,
@@ -458,4 +458,4 @@ DragDropContainer.defaultProps = {
   zIndex: 1000,
 };
 
-export default DragDropContainer;
+export default DragContainer;

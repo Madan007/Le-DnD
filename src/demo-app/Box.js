@@ -1,5 +1,5 @@
 import React from 'react';
-import { DragDropContainer, DropTarget } from '../le-dnd';
+import { DragContainer, DropContainer } from '../le-dnd';
 import BoxItem from './BoxItem';
 
 export default class Box extends React.Component {
@@ -44,12 +44,12 @@ export default class Box extends React.Component {
       */
     return (
       <div className="component_box">
-        <DropTarget
+        <DropContainer
           onHit={this.handleDrop}
           targetKey={this.props.targetKey}
           dropData={{ name: this.props.name }}
         >
-          <DropTarget
+          <DropContainer
             onHit={this.handleDrop}
             targetKey="boxItem"
             dropData={{ name: this.props.name }}
@@ -69,8 +69,8 @@ export default class Box extends React.Component {
                 );
               })}
             </div>
-          </DropTarget>
-        </DropTarget>
+          </DropContainer>
+        </DropContainer>
       </div>
     );
   }

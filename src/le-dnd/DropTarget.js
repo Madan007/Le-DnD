@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-class DropTarget extends React.Component {
+class DropContainer extends React.Component {
   constructor(props) {
     super(props);
     this.elem = null;
@@ -82,7 +82,7 @@ class DropTarget extends React.Component {
   }
 }
 
-DropTarget.propTypes = {
+DropContainer.propTypes = {
   children: PropTypes.node,
   render: PropTypes.func,
   highlightClassName: PropTypes.string,
@@ -99,7 +99,7 @@ DropTarget.propTypes = {
   onHit: PropTypes.func,
 };
 
-DropTarget.defaultProps = {
+DropContainer.defaultProps = {
   children: null,
   targetKey: 'ddc',
   onDragEnter: () => {},
@@ -110,4 +110,4 @@ DropTarget.defaultProps = {
   render: null,
 };
 
-export default DropTarget;
+export default DropContainer;

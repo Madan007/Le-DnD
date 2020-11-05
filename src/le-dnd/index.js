@@ -1,4 +1,4 @@
-import DragDropContainer from './DragDropContainer';
-import DropTarget from './DropTarget';
+import DragContainer from './DragDropContainer';
+import DropContainer from './DropTarget';
 
-export { DragDropContainer, DropTarget };
+export { DragContainer, DropContainer };
