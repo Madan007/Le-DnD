@@ -29,7 +29,7 @@
 Set up a draggable element and a drop target for it:
 
 ```
-import { DragDropContainer, DropTarget } from 'react-drag-drop-container';
+import { DragDropContainer, DropTarget } from './le-dnd';
 
 <DragDropContainer targetKey="foo" >
     <div>Drag Me!</div>
