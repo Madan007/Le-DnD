@@ -1,5 +1,5 @@
 import React from 'react';
-import { DragDropContainer, DropTarget } from '../jd-dnd';
+import { DragDropContainer, DropTarget } from '../le-dnd';
 import BoxItem from './BoxItem';
 
 export default class Box extends React.Component {

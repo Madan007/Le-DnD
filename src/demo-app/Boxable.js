@@ -1,5 +1,5 @@
 import React from 'react';
-import { DragDropContainer } from '../jd-dnd';
+import { DragDropContainer } from '../le-dnd';
 
 /*
     Boxable -- a thing you can drag into a Box
