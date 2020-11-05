@@ -1,7 +1,5 @@
 # DragDropContainer and DropTarget
 
-Live demo: [peterh32.github.io/react-drag-drop-container](http://peterh32.github.io/react-drag-drop-container/)
-
 ## Features
 
 - Very easy to implement and understand.
@@ -23,12 +21,6 @@ Live demo: [peterh32.github.io/react-drag-drop-container](http://peterh32.github
 ---
 
 ## Installation
-
-Install it in your project using npm:
-
-```
-npm install react-drag-drop-container --save
-```
 
 ---
 
